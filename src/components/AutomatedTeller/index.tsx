@@ -83,7 +83,6 @@ const AutomatedTeller: FC<AutomatedTellerProps> = (
               });
               setAuthenticatedUser(updateUserAmount(authenticatedUser, authenticatedUser.amount-withdrawalAmount))
               setMode(ScreenMode.Default);
-
             }
           } else {
             if (withdrawalAmount > maximumDailyLimit) {
@@ -95,9 +94,7 @@ const AutomatedTeller: FC<AutomatedTellerProps> = (
               });
               setAuthenticatedUser(updateUserAmount(authenticatedUser, authenticatedUser.amount-withdrawalAmount))
               setMode(ScreenMode.Default);
-
             }
-
           }
           break;
       }
@@ -109,7 +106,6 @@ const AutomatedTeller: FC<AutomatedTellerProps> = (
       }
     }
     setInputValue('');
-
   };
 
   const handleSetMode = (nextMode: ScreenMode) => () => {
