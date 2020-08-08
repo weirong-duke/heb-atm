@@ -6,6 +6,15 @@
 
 After seeing how relatively free the requirements were for this challenge, I was pretty excited to attempt my implementation; I had all sorts of cool styling and ideas. However, as soon as I started implementing some stuff, I realized that the component was far more complex than I had originally thought.
 
+## Quick Note About Pin Codes
+The default pin codes that have users attached (basically, the fixtures for the application store), at located in App.tsx. 
+The codes that exist:
+<ul>
+  <li>1234</li>
+  <li>3333</li>
+  <li>12345678</li>
+</ul>
+
 ## Mistakes
 
 ### State Management
