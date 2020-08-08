@@ -29,13 +29,17 @@ Oof, I don't think multiple useStates were the way to go here. I still think sto
 Didn't have the time to really think and write tests; I would first write unit tests for the utility that I wrote and use react-testing-library for the rendered components.
 
 ## What I thought I did well
--The styling looks pretty good
--The typing feels pretty natural and useful (ScreenMode, UserType)
--Logic implemented works the way that it is supposed to
+<ul>
+<li>-The styling looks pretty good</li>
+<li>-The typing feels pretty natural and useful (ScreenMode, UserType)</li>
+<li>-Logic implemented works the way that it is supposed to</li>
+</ul>
 
 ## Lessons Learned
--Don't try a new paradigm on a timed challenge
--Just implement Redux for state storage on a timed challenge
+<ul>
+<li>-Don't try a new paradigm on a timed challenge</li>
+<li>-Just implement Redux for state storage on a timed challenge</li>
+</ul>
 
 ## Extra libraries added 
 -node-sass
