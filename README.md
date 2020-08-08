@@ -1,3 +1,47 @@
+#HEB ATM
+
+### Time Taken: ~4 hours
+
+## Writeup - William Chen
+
+After seeing how relatively free the requirements were for this challenge, I was pretty excited to attempt my implementation; I had all sorts of cool styling and ideas. However, as soon as I started implementing some stuff, I realized that the component was far more complex than I had originally thought.
+
+## Mistakes
+
+### State Management
+I read https://tsh.io/state-of-frontend/ and was pretty interested in trying out React Context due to it's popularity (I have used Redux the majority of my React development). However, after an hour of using it for storage, I realized I had no idea how to update the Context. After reading through the documentation for a little bit (Context.Consumer), I decided to wipe it and just go with a static store that is passed down from the App.tsx parent. 
+
+If I had time to redo it, I would simply import Redux with a base state that holds user information. Then, the complexity could be abstracted to actions (type: 'SET_USER', etc).
+
+### Component Composition
+It was difficult to wrap my head around how to implement the screen as a React component. I didn't want it to be a simple single input; I wanted it to look like a real ATM. If I had thought it through a little more, I could have componentized the screen in a better capacity; as it is right now, I do not think that the AuthenticatedScreen component is useful at all. The only benefit is that it reduces the number of lines in AutomatedTeller.tsx.
+
+If I had time to redo it, I would abstract the screen itself into a "presentational" component that displays content passed in from the parent as children:
+
+<TellerScreen>{children}</TellerScreen>
+
+The screen could deal with the styling and the children would determine the content.
+
+### Component State
+Oof, I don't think multiple useStates were the way to go here. I still think storing the screen mode is a good way to manage that state, but the state management should probably use useReducer instead of useState; the multiple linked useState setters looks terrible and I should have thought of a better way to manage it with a single object variable as opposed to multiple useStates. The switch statements are too big.
+
+### Tests
+Didn't have the time to really think and write tests; I would first write unit tests for the utility that I wrote and use react-testing-library for the rendered components.
+
+## What I thought I did well
+-The styling looks pretty good
+-The typing feels pretty natural and useful (ScreenMode, UserType)
+-Logic implemented works the way that it is supposed to
+
+## Lessons Learned
+-Don't try a new paradigm on a timed challenge
+-Just implement Redux for state storage on a timed challenge
+
+## Extra libraries added 
+-node-sass
+-react-icons
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -11,34 +55,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
