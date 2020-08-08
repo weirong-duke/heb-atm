@@ -32,7 +32,7 @@ Didn't have the time to really think and write tests; I would first write unit t
 <ul>
 <li>The styling looks pretty good</li>
 <li>The typing feels pretty natural and useful (ScreenMode, UserType)</li>
-<li>Logic implemented works the way that it is supposed to</li>
+<li>The result works well</li>
 </ul>
 
 ## Lessons Learned
@@ -42,9 +42,10 @@ Didn't have the time to really think and write tests; I would first write unit t
 </ul>
 
 ## Extra libraries added 
--node-sass
--react-icons
-
+<ul>
+<li>node-sass</li>
+<li>react-icons</li>
+</ul>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
