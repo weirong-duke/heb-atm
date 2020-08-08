@@ -18,7 +18,7 @@ It was difficult to wrap my head around how to implement the screen as a React c
 
 If I had time to redo it, I would abstract the screen itself into a "presentational" component that displays content passed in from the parent as children:
 
-<TellerScreen>{children}</TellerScreen>
+\<TellerScreen\>{children}\</TellerScreen\>
 
 The screen could deal with the styling and the children would determine the content.
 
@@ -30,15 +30,15 @@ Didn't have the time to really think and write tests; I would first write unit t
 
 ## What I thought I did well
 <ul>
-<li>-The styling looks pretty good</li>
-<li>-The typing feels pretty natural and useful (ScreenMode, UserType)</li>
-<li>-Logic implemented works the way that it is supposed to</li>
+<li>The styling looks pretty good</li>
+<li>The typing feels pretty natural and useful (ScreenMode, UserType)</li>
+<li>Logic implemented works the way that it is supposed to</li>
 </ul>
 
 ## Lessons Learned
 <ul>
-<li>-Don't try a new paradigm on a timed challenge</li>
-<li>-Just implement Redux for state storage on a timed challenge</li>
+<li>Don't try a new paradigm on a timed challenge</li>
+<li>Just implement Redux for state storage on a timed challenge</li>
 </ul>
 
 ## Extra libraries added 
