@@ -6,6 +6,9 @@
 
 After seeing how relatively free the requirements were for this challenge, I was pretty excited to attempt my implementation; I had all sorts of cool styling and ideas. However, as soon as I started implementing some stuff, I realized that the component was far more complex than I had originally thought.
 
+## Sandbox
+https://codesandbox.io/s/dazzling-hermann-1qs91
+
 ## Quick Note About Pin Codes
 The default pin codes that have users attached (basically, the fixtures for the application store), at located in App.tsx. 
 The codes that exist:
